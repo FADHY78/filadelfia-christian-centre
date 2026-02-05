@@ -102,7 +102,7 @@ const Chatbot = () => {
       )}
 
       {isOpen && (
-        <div className="w-[350px] md:w-[420px] h-[550px] bg-white rounded-[32px] shadow-2xl flex flex-col overflow-hidden border border-gray-100 fade-in">
+        <div className="w-[320px] md:w-[380px] h-[500px] bg-white rounded-[32px] shadow-2xl flex flex-col overflow-hidden border border-gray-100 fade-in">
           {/* Header */}
           <div className="p-6 bg-gradient-to-br from-tag-red to-crushed-red text-white" style={{ backgroundImage: `linear-gradient(135deg, ${COLORS.TAG_RED}, ${COLORS.CRUSHED_RED})` }}>
             <div className="flex justify-between items-center">

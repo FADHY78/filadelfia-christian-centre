@@ -10,7 +10,7 @@ const Sermons = () => {
   return (
     <div className="pt-20 md:pt-24 min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
+      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-30"></div>
           <div className="absolute inset-0 bg-black/40"></div>

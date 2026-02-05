@@ -18,7 +18,8 @@ import {
   HandHeart,
   TrendingUp,
   CreditCard,
-  Send
+  Send,
+  Zap
 } from 'lucide-react';
 import { COLORS } from '../constants';
 
@@ -63,36 +64,33 @@ const Give = () => {
     { 
       icon: <Construction />, 
       title: "Upanuzi wa Kanisa", 
-      progress: 65, 
-      goal: "Msh 150M",
-      current: "Msh 97.5M",
-      deadline: "Disemba 2026",
-      description: "Ujenzi wa jengo jipya la ibada na ofisi za uongozi"
+      status: "Ujenzi wa Msingi", 
+      target: "Waumini 2,000+",
+      update: "Kuta zinaanza kupandishwa",
+      description: "Ujenzi wa jengo jipya la kisasa la ibada na ofisi za uongozi kutosheleza idadi ya waumini inayokua."
     },
     { 
       icon: <MonitorPlay />, 
       title: "Mitambo ya Media", 
-      progress: 40, 
-      goal: "Msh 45M",
-      current: "Msh 18M",
-      deadline: "Juni 2026", 
-      description: "Mitambo ya kisasa ya live streaming na sauti"
+      status: "Ununuzi wa Vifaa", 
+      target: "Watazamaji Live",
+      update: "Kamera 2 tayari zimenunuliwa", 
+      description: "Ufungaji wa mitambo ya kisasa ya kurusha ibada mubashara (Live Stream) na mifumo ya sauti ya hali ya juu."
     },
     { 
       icon: <HandHeart />, 
       title: "Mfuko wa Elimu", 
-      progress: 85, 
-      goal: "Msh 20M",
-      current: "Msh 17M", 
-      deadline: "Machi 2026",
-      description: "Kusaidia watoto walio katika mazingira magumu"
+      status: "Ugawaji wa Msaada", 
+      target: "Watoto 50+", 
+      update: "Ada za muhula wa kwanza zimelipwa",
+      description: "Kusaidia watoto wanaotoka katika mazingira magumu kupata mahitaji muhimu ya shule na ada za masomo."
     },
   ];
 
   return (
     <div className="pt-20 md:pt-24 min-h-screen bg-[#f8f9fa]">
       {/* Dynamic Hero Section */}
-      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative py-32 flex items-center justify-center overflow-hidden">
          <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 gradient-mesh opacity-90"></div>
             <div className="absolute inset-0 bg-black/40"></div>
@@ -313,26 +311,24 @@ const Give = () => {
                   <h3 className="text-2xl font-black mb-3 text-gray-900">{project.title}</h3>
                   <p className="text-gray-500 mb-8 leading-relaxed text-sm font-medium">{project.description}</p>
                   
-                  <div className="space-y-5">
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs font-black uppercase tracking-[0.2em] text-gray-400">Maendeleo</span>
-                      <span className="text-tag-red font-black" style={{ color: COLORS.TAG_RED }}>{project.progress}%</span>
+                  <div className="space-y-6">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-4 py-1.5 bg-tag-red/10 text-tag-red rounded-full text-[10px] font-black uppercase tracking-widest border border-tag-red/20" style={{ color: COLORS.TAG_RED }}>
+                        {project.status}
+                      </span>
+                      <span className="px-4 py-1.5 bg-tag-yellow/10 text-tag-yellow rounded-full text-[10px] font-black uppercase tracking-widest border border-tag-yellow/20" style={{ color: COLORS.TAG_YELLOW }}>
+                        {project.target}
+                      </span>
                     </div>
-                    <div className="h-3 bg-gray-100 rounded-full overflow-hidden p-0.5">
-                      <div 
-                        className="h-full bg-tag-red rounded-full shadow-lg" 
-                        style={{ width: `${project.progress}%`, backgroundColor: COLORS.TAG_RED }}
-                      ></div>
-                    </div>
-                    <div className="flex justify-between items-center pt-2">
-                      <div>
-                        <p className="text-[10px] text-gray-400 font-black uppercase tracking-tighter mb-1">Zilizopatikana</p>
-                        <p className="text-lg font-black text-gray-900">{project.current}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-[10px] text-gray-400 font-black uppercase tracking-tighter mb-1">Kukamilisha</p>
-                        <p className="text-lg font-black text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>{project.goal}</p>
-                      </div>
+
+                    <div className="pt-4 border-t border-gray-100">
+                      <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-2 flex items-center gap-2">
+                        <Zap size={10} className="text-tag-red" style={{ color: COLORS.TAG_RED }} />
+                        Taarifa ya Sasa
+                      </p>
+                      <p className="text-sm font-black text-gray-900 leading-tight">
+                        {project.update}
+                      </p>
                     </div>
                   </div>
                 </div>

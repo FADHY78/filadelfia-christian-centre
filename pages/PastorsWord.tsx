@@ -54,7 +54,7 @@ const PastorsWord = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 md:py-48 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
+      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-90"></div>
           <div className="absolute inset-0 bg-black/40"></div>

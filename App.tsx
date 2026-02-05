@@ -53,8 +53,8 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? scrolledBg : transparentBg}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 group">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-white flex items-center justify-center rounded-xl md:rounded-2xl text-tag-red font-black text-base md:text-lg shadow-lg transform group-hover:rotate-12 transition-transform" style={{ color: COLORS.TAG_RED }}>
-            FCC
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-white p-1 flex items-center justify-center rounded-xl md:rounded-2xl shadow-lg shadow-black/20 transform group-hover:rotate-12 transition-transform">
+            <img src="/images/logo.jpg" alt="TAG Logo" className="w-full h-full object-contain rounded-lg" />
           </div>
           <div className="flex flex-col">
             <span className={`font-black text-lg md:text-xl leading-none tracking-tighter text-white`}>FILADELFIA</span>
@@ -89,7 +89,9 @@ const Navbar = () => {
         <div className="p-8 flex flex-col h-full">
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-tag-red font-black text-xl shadow-2xl" style={{ color: COLORS.TAG_RED }}>FCC</div>
+              <div className="w-12 h-12 bg-white p-2 rounded-2xl flex items-center justify-center shadow-2xl">
+                <img src="/images/logo.jpg" alt="TAG Logo" className="w-full h-full object-contain" />
+              </div>
               <div className="flex flex-col">
                 <span className="font-black text-2xl text-white tracking-tighter">FILADELFIA</span>
                 <span className="text-[10px] font-black text-tag-yellow uppercase tracking-widest" style={{ color: COLORS.TAG_YELLOW }}>Christian Centre</span>
@@ -147,7 +149,9 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6 text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start space-x-3">
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-tag-red font-black text-lg shadow-2xl shadow-black/40" style={{ color: COLORS.TAG_RED }}>FCC</div>
+              <div className="w-12 h-12 bg-white p-2 rounded-2xl flex items-center justify-center shadow-2xl">
+                <img src="/images/logo.jpg" alt="TAG Logo" className="w-full h-full object-contain" />
+              </div>
               <div className="flex flex-col text-left">
                 <span className="font-black text-xl tracking-tighter uppercase leading-none">FCC (TAG)</span>
                 <span className="text-[9px] font-black tracking-[0.2em] text-tag-yellow uppercase" style={{ color: COLORS.TAG_YELLOW }}>Goba-Tegeta(A)</span>
