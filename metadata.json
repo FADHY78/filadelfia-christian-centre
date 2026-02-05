@@ -1,0 +1,7 @@
+{
+  "name": "Filadelfia Christian Centre",
+  "description": "Tovuti rasmi ya Filadelfia Christian Centre (TAG) inayotoa huduma za kiroho, mahubiri, matukio, na kutoa sadaka mtandaoni kwa jamii ya waumini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
