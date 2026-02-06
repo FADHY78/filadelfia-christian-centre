@@ -1,23 +1,32 @@
 import React from 'react';
-import { Shield, Target, Eye, Users } from 'lucide-react';
+import { Shield, Target, Eye, Users, Church } from 'lucide-react';
 import { COLORS } from '../constants';
 
 const About = () => {
   return (
-    <div className="pt-24 min-h-screen">
+    <div className="pt-20 md:pt-24 min-h-screen">
       {/* Hero */}
-      <section className="bg-deep-charcoal text-white py-32 relative overflow-hidden" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
-         <div className="absolute inset-0 gradient-mesh opacity-20"></div>
-         <div className="container mx-auto px-4 relative z-10 text-center">
-           <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tighter uppercase">Kuhusu Sisi</h1>
-           <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/70 font-medium">
-             Tunajenga kizazi chenye hofu ya Mungu, tukiwa chini ya mwavuli wa Tanzania Assemblies of God (TAG).
-           </p>
-         </div>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 gradient-mesh opacity-90"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10 text-center">
+          <div className="inline-flex items-center gap-3 px-5 py-1.5 bg-white/10 backdrop-blur-md rounded-full mb-5 md:mb-6 text-tag-yellow border border-white/20" style={{ color: COLORS.TAG_YELLOW }}>
+            <Church size={16} />
+            <span className="font-black text-[9px] md:text-xs uppercase tracking-[0.2em]">Filadelfia Christian Centre</span>
+          </div>
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-4 md:mb-5 tracking-tighter uppercase drop-shadow-2xl">
+            Kuhusu <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Sisi</span>
+          </h1>
+          <p className="text-sm sm:text-base md:text-xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed px-4">
+            Tunajenga kizazi chenye hofu ya Mungu, tukiwa chini ya mwavuli wa Tanzania Assemblies of God (TAG).
+          </p>
+        </div>
       </section>
 
       {/* History */}
-      <section className="py-24 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <section className="py-12 md:py-24 container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         <div>
           <span className="text-tag-red font-black text-xs tracking-[0.3em] uppercase mb-4 block" style={{ color: COLORS.TAG_RED }}>HISTORIA YETU</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 leading-tight tracking-tighter">Safari ya Imani Goba-Tegeta(A)</h2>
@@ -39,14 +48,14 @@ const About = () => {
           </div>
         </div>
         <div className="relative">
-           <div className="aspect-square bg-white/50 backdrop-blur-sm rounded-[60px] overflow-hidden shadow-2xl border-8 border-white/50">
+           <div className="aspect-square bg-white/50 backdrop-blur-sm rounded-[32px] md:rounded-[60px] overflow-hidden shadow-2xl border-4 md:border-8 border-white/50">
               <img 
                 src="/images/pastor-neema.jpg" 
                 alt="Pastor Neema Stanley Mndasha" 
                 className="w-full h-full object-cover object-top"
               />
            </div>
-           <div className="absolute -bottom-10 -left-10 bg-tag-red p-10 rounded-[40px] shadow-2xl text-white max-w-[280px]" style={{ backgroundColor: COLORS.TAG_RED }}>
+           <div className="hidden md:block absolute -bottom-10 -left-10 bg-tag-red p-10 rounded-[40px] shadow-2xl text-white max-w-[280px]" style={{ backgroundColor: COLORS.TAG_RED }}>
               <Shield size={48} className="mb-4 text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }} />
               <h3 className="text-xl font-black mb-2">Imara Katika Kristo</h3>
               <p className="text-sm opacity-90 font-medium">Tunasimama juu ya msingi wa neno la Mungu usiotikisika tukiwa na uongozi thabiti.</p>
@@ -55,17 +64,17 @@ const About = () => {
       </section>
 
       {/* Vision & Values */}
-      <section className="py-24 bg-white/40 backdrop-blur-sm border-y border-white/20">
+      <section className="py-12 md:py-24 bg-white/40 backdrop-blur-sm border-y border-white/20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="bg-white/90 backdrop-blur-md p-12 rounded-[45px] shadow-xl border-t-8 border-tag-red" style={{ borderTopColor: COLORS.TAG_RED }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+            <div className="bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-[32px] md:rounded-[45px] shadow-xl border-t-8 border-tag-red" style={{ borderTopColor: COLORS.TAG_RED }}>
                <Target size={48} className="text-tag-red mb-8" style={{ color: COLORS.TAG_RED }} />
                <h3 className="text-3xl md:text-4xl font-black mb-6 text-gray-900 tracking-tighter">Maono Yetu</h3>
                <p className="text-lg text-gray-600 leading-relaxed font-medium">
                  Kuwa kanisa la kielelezo linaloleta uamsho wa kweli, tukiandaa waumini kuwa na ushawishi wa kiungu katika sekta zote za maisha.
                </p>
             </div>
-            <div className="bg-white/90 backdrop-blur-md p-12 rounded-[45px] shadow-xl border-t-8 border-tag-yellow" style={{ borderTopColor: COLORS.TAG_YELLOW }}>
+            <div className="bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-[32px] md:rounded-[45px] shadow-xl border-t-8 border-tag-yellow" style={{ borderTopColor: COLORS.TAG_YELLOW }}>
                <Eye size={48} className="text-tag-yellow mb-8" style={{ color: COLORS.TAG_YELLOW }} />
                <h3 className="text-3xl md:text-4xl font-black mb-6 text-gray-900 tracking-tighter">Dhamira Yetu</h3>
                <p className="text-lg text-gray-600 leading-relaxed font-medium">
@@ -77,10 +86,10 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-24 container mx-auto px-4">
-        <div className="text-center mb-20">
+      <section className="py-12 md:py-24 container mx-auto px-6">
+        <div className="text-center mb-12 md:mb-20">
           <span className="text-tag-red font-bold tracking-widest uppercase mb-4 block" style={{ color: COLORS.TAG_RED }}>VIONGOZI WETU</span>
-          <h2 className="text-5xl font-black text-gray-900">Wachungaji na Watumishi</h2>
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900">Wachungaji na Watumishi</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {[

@@ -18,33 +18,33 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-90"></div>
         <div className="absolute inset-0 bg-black/40"></div>
         
-        <div className="container mx-auto px-6 relative z-10 text-center pt-28 md:pt-32 pb-20">
+        <div className="container mx-auto px-6 relative z-10 text-center pt-20 md:pt-32 pb-16 md:pb-20">
           <div className="fade-in max-w-5xl mx-auto">
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-[1.1] drop-shadow-2xl uppercase">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black text-white mb-6 tracking-tighter leading-[1] md:leading-[1.1] drop-shadow-2xl uppercase">
               FILADELFIA <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>CHRISTIAN CENTRE</span>
             </h1>
-            <h2 className="text-[10px] md:text-xl font-black text-tag-yellow mb-8 md:mb-10 tracking-[0.15em] md:tracking-[0.2em] uppercase drop-shadow-lg" style={{ color: COLORS.TAG_YELLOW }}>
+            <h2 className="text-[10px] md:text-xl font-black text-tag-yellow mb-8 md:mb-10 tracking-[0.2em] md:tracking-[0.3em] uppercase drop-shadow-lg" style={{ color: COLORS.TAG_YELLOW }}>
               UPENDO & NGUVU
             </h2>
-            <p className="text-sm md:text-lg text-white/90 max-w-lg mx-auto mb-10 leading-relaxed font-medium px-2">
+            <p className="text-sm md:text-lg text-white/90 max-w-lg mx-auto mb-10 leading-relaxed font-medium px-4">
               Tukijenga jamii yenye imani, matumaini, na mabadiliko ya kweli kupitia neno la Kristo.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-2 sm:px-0">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 px-6 sm:px-0">
               <button 
                 onClick={() => navigate('/live')}
-                className="w-full sm:w-auto px-7 py-3.5 bg-tag-red text-white rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white hover:text-tag-red transition-all shadow-xl active:scale-95" 
+                className="w-full sm:w-auto px-10 py-5 bg-tag-red text-white rounded-full font-black text-xs md:text-base flex items-center justify-center gap-3 hover:bg-white hover:text-tag-red transition-all shadow-2xl active:scale-95 scale-100 hover:scale-105" 
                 style={{ backgroundColor: COLORS.TAG_RED }}
               >
                 TAZAMA LIVE <PlayCircle size={20} />
               </button>
               <button 
                 onClick={() => navigate('/services')}
-                className="w-full sm:w-auto px-7 py-3.5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-black text-sm md:text-base flex items-center justify-center gap-3 hover:bg-white/20 transition-all active:scale-95"
+                className="w-full sm:w-auto px-10 py-5 bg-white/10 backdrop-blur-md text-white border border-white/20 rounded-full font-black text-xs md:text-base flex items-center justify-center gap-3 hover:bg-white hover:text-gray-900 transition-all active:scale-95 scale-100 hover:scale-105"
               >
                 HUDUMA ZETU <ChevronRight size={20} />
               </button>

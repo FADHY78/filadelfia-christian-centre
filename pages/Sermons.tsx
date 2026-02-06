@@ -10,17 +10,17 @@ const Sermons = () => {
   return (
     <div className="pt-20 md:pt-24 min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-30"></div>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-           <div className="inline-flex items-center gap-3 px-6 py-2 bg-tag-yellow text-gray-900 rounded-full mb-8 border border-white/20 shadow-xl" style={{ backgroundColor: COLORS.TAG_YELLOW }}>
+           <div className="inline-flex items-center gap-3 px-6 py-2 bg-tag-yellow text-gray-900 rounded-full mb-6 border border-white/20 shadow-xl" style={{ backgroundColor: COLORS.TAG_YELLOW }}>
               <Headphones size={18} className="animate-pulse" />
               <span className="font-black text-[10px] md:text-xs uppercase tracking-[0.2em]">Maktaba ya Kiroho</span>
            </div>
-           <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase drop-shadow-2xl leading-none">
+           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-5 tracking-tighter uppercase drop-shadow-2xl leading-none">
              Maktaba ya <span className="text-tag-red" style={{ color: COLORS.TAG_RED }}>Mahubiri</span>
            </h1>
            <p className="text-lg md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed px-4">

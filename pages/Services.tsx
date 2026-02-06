@@ -65,25 +65,25 @@ const Services = () => {
         {/* Floating Back Button */}
         <button 
           onClick={closeDetail}
-          className="fixed top-24 md:top-28 left-4 md:left-12 z-[60] flex items-center gap-2 md:gap-3 px-6 py-3 bg-white text-gray-900 rounded-full font-black shadow-2xl border border-gray-100 hover:bg-tag-red hover:text-white transition-all group active:scale-95 text-xs md:text-sm"
+          className="fixed top-20 sm:top-24 md:top-28 left-3 sm:left-4 md:left-12 z-[60] flex items-center gap-2 md:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 bg-white text-gray-900 rounded-full font-black shadow-2xl border border-gray-100 hover:bg-tag-red hover:text-white transition-all group active:scale-95 text-[10px] sm:text-xs md:text-sm"
         >
           <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
           <span>HUDUMA ZOTE</span>
         </button>
 
         {/* Dynamic Header Section */}
-        <section className="relative py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
+        <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
           <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 gradient-mesh opacity-90"></div>
             <div className="absolute inset-0 bg-black/40"></div>
           </div>
 
           <div className="container mx-auto px-6 relative z-10 text-center">
-             <div className="inline-flex items-center gap-3 px-5 py-2 bg-tag-yellow/20 backdrop-blur-md text-tag-yellow rounded-full mb-8 font-black text-[10px] md:text-xs uppercase tracking-[0.3em] border border-tag-yellow/30" style={{ color: COLORS.TAG_YELLOW }}>
+             <div className="inline-flex items-center gap-3 px-5 py-2 bg-tag-yellow/20 backdrop-blur-md text-tag-yellow rounded-full mb-6 font-black text-[10px] md:text-xs uppercase tracking-[0.3em] border border-tag-yellow/30" style={{ color: COLORS.TAG_YELLOW }}>
                 {React.cloneElement(selectedMinistry.icon as React.ReactElement, { size: 16 })}
                 IDARA YA {selectedMinistry.name.split(' ').pop()}
              </div>
-             <h1 className="text-4xl md:text-8xl font-black text-white tracking-tighter mb-6 drop-shadow-2xl leading-none uppercase">
+             <h1 className="text-3xl md:text-7xl font-black text-white tracking-tighter mb-5 drop-shadow-2xl leading-none uppercase">
                {selectedMinistry.name}
              </h1>
              <p className="text-lg md:text-2xl text-white/70 max-w-2xl mx-auto font-medium leading-relaxed">
@@ -95,10 +95,10 @@ const Services = () => {
         {/* Content Body - Floating Container */}
         <section className="relative z-10 -mt-12 md:-mt-20 pb-32">
           <div className="container mx-auto px-4 sm:px-6">
-            <div className="bg-white rounded-[48px] md:rounded-[80px] shadow-3xl p-8 md:p-24 border border-white/50">
+            <div className="bg-white rounded-[28px] sm:rounded-[48px] md:rounded-[80px] shadow-3xl p-5 sm:p-8 md:p-24 border border-white/50">
               
               {/* Quick Info Dashboard */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 md:mb-32">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-12 sm:mb-20 md:mb-32">
                 {[
                   { label: 'Ratiba ya Ibada', value: selectedMinistry.schedule, icon: <Clock size={32} />, color: 'tag-red' },
                   { label: 'Walengwa Wetu', value: selectedMinistry.ages, icon: <Users size={32} />, color: 'tag-yellow' },
@@ -184,7 +184,7 @@ const Services = () => {
               </div>
 
               {/* Join CTA Section */}
-              <div className="relative overflow-hidden bg-gray-900 rounded-[56px] md:rounded-[80px] p-12 md:p-28 text-center text-white shadow-3xl group">
+              <div className="relative overflow-hidden bg-gray-900 rounded-[28px] sm:rounded-[56px] md:rounded-[80px] p-8 sm:p-12 md:p-28 text-center text-white shadow-3xl group">
                  <div className="absolute inset-0 gradient-mesh opacity-30"></div>
                  <div className="relative z-10 max-w-3xl mx-auto">
                     <div className="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mx-auto mb-10 backdrop-blur-md border border-white/10">
@@ -289,17 +289,17 @@ const Services = () => {
   return (
     <div className="pt-20 md:pt-24 min-h-screen bg-[#f8f9fa]">
       {/* Main Grid Header - Consistent with others */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-90"></div>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-           <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full mb-8 border border-white/20 shadow-xl">
+           <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 border border-white/20 shadow-xl">
               <Sparkles size={18} className="text-tag-yellow animate-pulse" style={{ color: COLORS.TAG_YELLOW }} />
               <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-[0.3em]">Jamii Inayotumika</span>
            </div>
-           <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase leading-none drop-shadow-2xl">
+           <h1 className="text-4xl md:text-7xl font-black text-white mb-5 tracking-tighter uppercase leading-none drop-shadow-2xl">
              Huduma <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Zetu</span>
            </h1>
            <p className="text-lg md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed px-4">
@@ -314,7 +314,7 @@ const Services = () => {
           {MINISTRIES.map((m) => (
             <div 
               key={m.id} 
-              className="group bg-white rounded-[48px] p-8 md:p-12 shadow-xl hover:shadow-3xl transition-all duration-500 border border-gray-100 flex flex-col md:flex-row gap-8 items-center cursor-pointer relative overflow-hidden" 
+              className="group bg-white rounded-[28px] sm:rounded-[48px] p-6 sm:p-8 md:p-12 shadow-xl hover:shadow-3xl transition-all duration-500 border border-gray-100 flex flex-col md:flex-row gap-6 sm:gap-8 items-center cursor-pointer relative overflow-hidden" 
               onClick={() => openDetail(m)}
             >
                <div className="absolute -top-12 -right-12 w-48 h-48 bg-tag-red/5 rounded-full group-hover:scale-150 transition-transform duration-700"></div>

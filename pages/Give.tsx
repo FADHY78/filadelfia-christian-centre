@@ -90,20 +90,20 @@ const Give = () => {
   return (
     <div className="pt-20 md:pt-24 min-h-screen bg-[#f8f9fa]">
       {/* Dynamic Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden">
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden">
          <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 gradient-mesh opacity-90"></div>
             <div className="absolute inset-0 bg-black/40"></div>
          </div>
          <div className="container mx-auto px-6 relative z-10 text-center">
-           <div className="inline-flex items-center gap-3 px-5 py-1.5 bg-white/10 backdrop-blur-md rounded-full mb-6 text-tag-yellow border border-white/20" style={{ color: COLORS.TAG_YELLOW }}>
+           <div className="inline-flex items-center gap-3 px-5 py-1.5 bg-white/10 backdrop-blur-md rounded-full mb-5 text-tag-yellow border border-white/20" style={{ color: COLORS.TAG_YELLOW }}>
               <Heart size={14} className="fill-current" />
               <span className="font-black text-[9px] uppercase tracking-[0.2em]">Ukarimu ni Ibada</span>
            </div>
-           <h1 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter uppercase drop-shadow-2xl">
+           <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter uppercase drop-shadow-2xl">
              Kutoa <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Hubariki</span>
            </h1>
-           <p className="text-base md:text-xl text-white/80 max-w-xl mx-auto font-medium leading-relaxed px-4">
+           <p className="text-sm sm:text-base md:text-xl text-white/80 max-w-xl mx-auto font-medium leading-relaxed px-4">
              Jiunge nasi katika kueneza ufalme wa Mungu kupitia rasilimali alizokubariki nazo.
            </p>
          </div>
@@ -339,82 +339,100 @@ const Give = () => {
       </section>
 
       {/* Quick Giving Form */}
-      <section className="py-20 bg-transparent">
+      <section className="py-24 bg-transparent">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-black text-gray-900 tracking-tighter mb-4">
-                Ahadi ya <span className="text-tag-red" style={{ color: COLORS.TAG_RED }}>Haraka</span>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-16 px-4">
+              <div className="inline-flex items-center gap-3 px-6 py-2 bg-tag-red/5 rounded-full mb-6 border border-tag-red/10 text-tag-red" style={{ color: COLORS.TAG_RED }}>
+                <Send size={18} />
+                <span className="font-black text-[10px] uppercase tracking-[0.3em]">Ahadi ya Haraka</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-6">
+                Toa kwa <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Upendo</span>
               </h2>
-              <p className="text-gray-600">Jaza fomu hii kwa kutuma ahadi yako ya sadaka</p>
+              <p className="text-gray-500 font-medium max-w-lg mx-auto leading-relaxed">
+                Jaza fomu hii kwa kutuma ahadi yako ya sadaka. Tutawasiliana nawe kufuata hatua za ukamilishaji.
+              </p>
             </div>
 
-            <div className="bg-white/80 backdrop-blur-xl rounded-[40px] p-8 md:p-12 shadow-xl border border-white/50">
-              <div className="space-y-8">
-                {/* Amount Selection */}
-                <div>
-                  <label className="block text-lg font-black text-gray-900 mb-4">Kiasi cha Sadaka</label>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-                    {presetAmounts.map((amt) => (
-                      <button 
-                        key={amt} 
-                        onClick={() => setAmount(amt)} 
-                        className={`py-4 rounded-2xl font-black text-sm transition-all border-2 ${
-                          amount === amt 
-                            ? 'bg-tag-red border-tag-red text-white scale-105' 
-                            : 'bg-white/50 backdrop-blur-sm border-white/20 text-gray-600 hover:border-tag-red hover:text-tag-red'
-                        }`}
-                        style={amount === amt ? { backgroundColor: COLORS.TAG_RED, borderColor: COLORS.TAG_RED } : {}}
-                      >
-                        TSh {parseInt(amt).toLocaleString()}
-                      </button>
-                    ))}
-                  </div>
-                  <input 
-                    type="number" 
-                    value={amount} 
-                    onChange={(e) => setAmount(e.target.value)} 
-                    className="w-full bg-white/50 backdrop-blur-sm border-2 border-white/20 rounded-3xl py-6 px-8 focus:border-tag-red outline-none font-black text-2xl text-gray-900 placeholder-gray-400" 
-                    placeholder="Weka kiasi kingine..." 
-                  />
-                </div>
+            <div className="bg-white rounded-[28px] sm:rounded-[48px] md:rounded-[64px] p-5 sm:p-8 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-tag-yellow/5 rounded-full blur-3xl -tr-32 -tt-32"></div>
+              <div className="relative z-10 space-y-12">
+        {/* Amount Selection */}
+        <div className="mb-10">
+          <label className="block text-lg font-black text-gray-900 mb-6 flex items-center gap-3">
+            <Coins size={24} className="text-tag-red" style={{ color: COLORS.TAG_RED }} />
+            Kiasi cha Sadaka
+          </label>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            {presetAmounts.map((amt) => (
+              <button 
+                key={amt} 
+                onClick={() => setAmount(amt)} 
+                className={`py-5 rounded-3xl font-black text-sm md:text-base transition-all border-2 shadow-sm ${
+                  amount === amt 
+                    ? 'bg-tag-red border-tag-red text-white scale-105 shadow-xl' 
+                    : 'bg-white border-gray-100 text-gray-600 hover:border-tag-red hover:text-tag-red'
+                }`}
+                style={amount === amt ? { backgroundColor: COLORS.TAG_RED, borderColor: COLORS.TAG_RED } : {}}
+              >
+                TSh {parseInt(amt).toLocaleString()}
+              </button>
+            ))}
+          </div>
+          <div className="relative group">
+            <div className="absolute left-8 top-1/2 -translate-y-1/2 text-gray-400 font-black text-xl group-focus-within:text-tag-red transition-colors">TSh</div>
+            <input 
+              type="number" 
+              value={amount} 
+              onChange={(e) => setAmount(e.target.value)} 
+              className="w-full bg-white border-2 border-gray-100 rounded-[32px] py-6 pl-20 pr-8 focus:border-tag-red outline-none font-black text-2xl md:text-3xl text-gray-900 placeholder-gray-300 transition-all shadow-inner" 
+              placeholder="Weka kiasi kingine..." 
+            />
+          </div>
+        </div>
 
-                {/* Giving Type */}
-                <div>
-                  <label className="block text-lg font-black text-gray-900 mb-4">Aina ya Sadaka</label>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { id: 'zaka', label: 'Zaka', desc: '10% ya kipato', icon: <HandHeart size={28} /> },
-                      { id: 'sadaka', label: 'Sadaka', desc: 'Hiari ya moyo', icon: <Heart size={28} /> },
-                      { id: 'misheni', label: 'Misheni', desc: 'Uenezaji wa injili', icon: <Globe size={28} /> },
-                      { id: 'jengo', label: 'Jengo', desc: 'Ujenzi wa kanisa', icon: <Construction size={28} /> }
-                    ].map((type) => (
-                      <button 
-                        key={type.id} 
-                        onClick={() => setGivingType(type.id)} 
-                        className={`p-6 rounded-3xl font-black text-left border-2 transition-all ${
-                          givingType === type.id 
-                            ? 'bg-tag-yellow border-tag-yellow text-gray-900 font-bold' 
-                            : 'bg-white/50 backdrop-blur-sm border-white/20 text-gray-600 hover:border-tag-yellow'
-                        }`}
-                        style={givingType === type.id ? { backgroundColor: COLORS.TAG_YELLOW, borderColor: COLORS.TAG_YELLOW } : {}}
-                      >
-                        <div className={`mb-3 transition-colors ${givingType === type.id ? 'text-gray-900' : 'text-tag-red'}`} style={givingType !== type.id ? { color: COLORS.TAG_RED } : {}}>
-                          {type.icon}
-                        </div>
-                        <div className="font-black text-lg">{type.label}</div>
-                        <div className="text-xs opacity-80">{type.desc}</div>
-                      </button>
-                    ))}
-                  </div>
+        {/* Giving Type */}
+        <div className="mb-12">
+          <label className="block text-lg font-black text-gray-900 mb-6 flex items-center gap-3">
+            <Sparkles size={24} className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }} />
+            Aina ya Sadaka
+          </label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { id: 'zaka', label: 'Zaka', desc: '10% ya kipato', icon: <HandHeart size={28} /> },
+              { id: 'sadaka', label: 'Sadaka', desc: 'Hiari ya moyo', icon: <Heart size={28} /> },
+              { id: 'misheni', label: 'Misheni', desc: 'Uenezaji wa injili', icon: <Globe size={28} /> },
+              { id: 'jengo', label: 'Jengo', desc: 'Ujenzi wa kanisa', icon: <Construction size={28} /> }
+            ].map((type) => (
+              <button 
+                key={type.id} 
+                onClick={() => setGivingType(type.id)} 
+                className={`p-6 md:p-8 rounded-[32px] font-black text-left border-2 transition-all group flex items-center gap-6 ${
+                  givingType === type.id 
+                    ? 'bg-tag-yellow border-tag-yellow text-gray-900 shadow-xl' 
+                    : 'bg-white border-gray-100 text-gray-600 hover:border-tag-yellow hover:bg-tag-yellow/5'
+                }`}
+                style={givingType === type.id ? { backgroundColor: COLORS.TAG_YELLOW, borderColor: COLORS.TAG_YELLOW } : {}}
+              >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 transition-colors ${givingType === type.id ? 'bg-white/20 text-gray-900' : 'bg-tag-red/5 text-tag-red'}`} style={givingType !== type.id ? { color: COLORS.TAG_RED } : {}}>
+                  {type.icon}
                 </div>
+                <div>
+                  <div className="text-lg md:text-xl font-black uppercase tracking-tight">{type.label}</div>
+                  <div className="text-[11px] md:text-xs opacity-60 font-medium tracking-wider">{type.desc}</div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
 
-                {/* Submit Button */}
-                <button className="w-full bg-gradient-to-r from-tag-red to-red-600 text-white py-6 rounded-3xl font-black text-xl shadow-2xl hover:shadow-3xl active:scale-95 transition-all flex items-center justify-center gap-4" style={{ background: `linear-gradient(90deg, ${COLORS.TAG_RED} 0%, #dc2626 100%)` }}>
-                  <Heart size={24} className="fill-current" />
-                  TUMA AHADI YANGU
-                  <ArrowUpRight size={24} />
-                </button>
+        {/* Submit Button */}
+        <button className="w-full bg-tag-red text-white py-6 md:py-8 rounded-[32px] font-black text-xl md:text-2xl shadow-[0_20px_40px_-10px_rgba(30,58,138,0.3)] hover:shadow-[0_25px_50px_-12px_rgba(30,58,138,0.4)] active:scale-[0.98] transition-all flex items-center justify-center gap-4 group scale-100 hover:scale-[1.01]" style={{ backgroundColor: COLORS.TAG_RED }}>
+          <Heart size={28} className="fill-current group-hover:scale-125 transition-transform" />
+          WASILISHA AHADI
+          <ArrowUpRight size={28} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+        </button>
               </div>
             </div>
           </div>
@@ -427,7 +445,7 @@ const Give = () => {
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
               <Sparkles size={48} className="mx-auto text-tag-yellow mb-6" style={{ color: COLORS.TAG_YELLOW }} />
-              <blockquote className="text-xl md:text-3xl font-medium italic leading-relaxed mb-6">
+              <blockquote className="text-base sm:text-xl md:text-3xl font-medium italic leading-relaxed mb-6 px-4">
                 "Mpeni, nanyi mtapewa; kipimo kizuri, kimesongwa, kimesukumwa, kimefurika, mtapewa katika kifua chenu..."
               </blockquote>
               <cite className="text-tag-yellow font-black text-lg" style={{ color: COLORS.TAG_YELLOW }}>— Luka 6:38</cite>

@@ -7,34 +7,34 @@ const Contact = () => {
   return (
     <div className="pt-24 min-h-screen bg-white">
       {/* Dynamic Hero Section - Consistent with Services/About */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-90"></div>
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-           <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full mb-8 text-tag-yellow border border-white/20" style={{ color: COLORS.TAG_YELLOW }}>
+           <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full mb-6 text-tag-yellow border border-white/20" style={{ color: COLORS.TAG_YELLOW }}>
               <Navigation size={20} />
               <span className="font-black text-xs uppercase tracking-[0.2em]">Sisi Tuko Hapa Kwa Ajili Yako</span>
            </div>
-           <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase drop-shadow-2xl">
+           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-5 tracking-tighter uppercase drop-shadow-2xl">
              Wasiliana <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Nasi</span>
            </h1>
-           <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+           <p className="text-base sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed px-4">
              Tunapatikana Goba-Tegeta(A). Karibu tushiriki baraka za Bwana pamoja.
            </p>
         </div>
       </section>
 
       {/* Main Contact Area */}
-      <section className="py-24 container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <section className="py-12 md:py-24 container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           
           {/* Contact Form Section */}
-          <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-[56px] shadow-2xl border border-gray-100">
+          <div className="lg:col-span-7 bg-white p-6 sm:p-8 md:p-12 rounded-[32px] md:rounded-[56px] shadow-2xl border border-gray-100">
             <div className="mb-12">
                <span className="text-tag-red font-black text-xs tracking-[0.3em] uppercase block mb-4" style={{ color: COLORS.TAG_RED }}>TUANDIKIE</span>
-               <h2 className="text-4xl font-black text-gray-900 tracking-tighter">Tuma Ombi la Maombi au Ujumbe</h2>
+               <h2 className="text-2xl md:text-4xl font-black text-gray-900 tracking-tighter">Tuma Ombi la Maombi au Ujumbe</h2>
             </div>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,7 +69,7 @@ const Contact = () => {
           {/* Contact Info Sidebar */}
           <div className="lg:col-span-5 space-y-8">
             {/* Quick Info Cards */}
-            <div className="bg-gray-900 rounded-[48px] p-10 text-white shadow-2xl relative overflow-hidden group">
+            <div className="bg-gray-900 rounded-[32px] md:rounded-[48px] p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden group">
                <div className="absolute inset-0 gradient-mesh opacity-10"></div>
                <div className="relative z-10 space-y-8">
                   <div className="flex items-start gap-6">
@@ -103,7 +103,7 @@ const Contact = () => {
             </div>
 
             {/* Service Times Card */}
-            <div className="bg-tag-yellow p-10 rounded-[48px] shadow-xl text-gray-900" style={{ backgroundColor: COLORS.TAG_YELLOW }}>
+            <div className="bg-tag-yellow p-6 sm:p-10 rounded-[32px] md:rounded-[48px] shadow-xl text-gray-900" style={{ backgroundColor: COLORS.TAG_YELLOW }}>
                <div className="flex items-center gap-3 mb-8">
                  <Calendar size={28} className="text-gray-900" />
                  <h3 className="text-2xl font-black tracking-tight uppercase">Ratiba za Ibada</h3>
@@ -122,7 +122,7 @@ const Contact = () => {
             </div>
 
             {/* Mini Map */}
-            <div className="h-72 rounded-[48px] overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all cursor-pointer border-8 border-white">
+            <div className="h-56 md:h-72 rounded-[32px] md:rounded-[48px] overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all cursor-pointer border-4 md:border-8 border-white">
               <iframe 
                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15849.23123456789!2d39.182345!3d-6.745678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c490000000000%3A0x0000000000000000!2sGoba%2C%20Dar%20es%20Salaam!5e0!3m2!1sen!2stz!4v1698240000000!5m2!1sen!2stz" 
                  width="100%" height="100%" style={{ border:0 }} loading="lazy" 

@@ -7,20 +7,20 @@ const Live = () => {
   return (
     <div className="pt-24 min-h-screen bg-white">
       {/* Hero Section - Consistent with other pages */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-deep-charcoal" style={{ backgroundColor: COLORS.DEEP_CHARCOAL }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-30"></div>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-           <div className="inline-flex items-center gap-3 px-6 py-2 bg-tag-red text-white rounded-full mb-8 border border-white/20 animate-pulse shadow-xl" style={{ backgroundColor: COLORS.TAG_RED }}>
+           <div className="inline-flex items-center gap-3 px-6 py-2 bg-tag-red text-white rounded-full mb-6 border border-white/20 animate-pulse shadow-xl" style={{ backgroundColor: COLORS.TAG_RED }}>
               <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
               <span className="font-black text-xs uppercase tracking-[0.2em]">Live Stream</span>
            </div>
-           <h1 className="text-5xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase drop-shadow-2xl">
+           <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-white mb-5 tracking-tighter uppercase drop-shadow-2xl">
              Ibada <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Mubashara</span>
            </h1>
-           <p className="text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+           <p className="text-base sm:text-xl md:text-2xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed px-4">
              Ungana nasi mtandaoni kutoka popote duniani na ushiriki baraka za Bwana.
            </p>
         </div>
@@ -29,7 +29,7 @@ const Live = () => {
       {/* Main Content - Coming Soon Message */}
       <section className="py-24 container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="relative bg-gray-900 rounded-[56px] p-12 md:p-24 text-center text-white shadow-2xl overflow-hidden group">
+          <div className="relative bg-gray-900 rounded-[28px] sm:rounded-[56px] p-6 sm:p-12 md:p-24 text-center text-white shadow-2xl overflow-hidden group">
             <div className="absolute inset-0 gradient-mesh opacity-10 group-hover:opacity-20 transition-opacity"></div>
             <div className="absolute -top-24 -right-24 w-64 h-64 bg-tag-red/20 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-tag-yellow/10 rounded-full blur-3xl"></div>
@@ -40,9 +40,9 @@ const Live = () => {
               </div>
               
               <div className="space-y-4">
-                <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-black tracking-tighter leading-none">
                   Hivi Karibuni <br />
-                  <span className="text-tag-red uppercase text-2xl md:text-4xl" style={{ color: COLORS.TAG_RED }}>Tunakuja Mubashara!</span>
+                  <span className="text-tag-red uppercase text-lg sm:text-2xl md:text-4xl" style={{ color: COLORS.TAG_RED }}>Tunakuja Mubashara!</span>
                 </h2>
                 <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
                   Tunakamilisha maandalizi ya kiufundi ili kukuletea matangazo bora ya ibada zetu moja kwa moja (Live Stream) kupitia tovuti hii, YouTube, na Facebook.

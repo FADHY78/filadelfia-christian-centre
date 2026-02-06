@@ -54,13 +54,13 @@ const PastorsWord = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-32 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
+      <section className="relative py-20 md:py-28 flex items-center justify-center overflow-hidden bg-crushed-red" style={{ backgroundColor: COLORS.CRUSHED_RED }}>
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 gradient-mesh opacity-90"></div>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-4xl md:text-7xl font-black text-white mb-4 md:mb-6 tracking-tighter uppercase drop-shadow-2xl">
+          <h1 className="text-3xl md:text-6xl font-black text-white mb-4 md:mb-5 tracking-tighter uppercase drop-shadow-2xl">
             Neno la <span className="text-tag-yellow" style={{ color: COLORS.TAG_YELLOW }}>Mchungaji</span>
           </h1>
           <p className="text-base md:text-xl text-white/80 max-w-2xl mx-auto font-medium px-4">

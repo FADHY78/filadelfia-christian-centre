@@ -10,7 +10,17 @@ import {
   Phone, 
   Mail, 
   MapPin,
-  ChevronRight
+  ChevronRight,
+  Heart,
+  Home as HomeIcon,
+  Info,
+  HandHeart,
+  BookOpen,
+  Gift,
+  Radio,
+  MessageCircle,
+  ArrowUpRight,
+  Sparkles
 } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -37,13 +47,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Nyumbani', path: '/' },
-    { name: 'Kuhusu', path: '/about' },
-    { name: 'Huduma', path: '/services' },
-    { name: 'Mahubiri', path: '/sermons' },
-    { name: 'Kutoa', path: '/give' },
-    { name: 'Live', path: '/live' },
-    { name: 'Mawasiliano', path: '/contact' },
+    { name: 'Nyumbani', path: '/', icon: <HomeIcon size={20} /> },
+    { name: 'Kuhusu', path: '/about', icon: <Info size={20} /> },
+    { name: 'Huduma', path: '/services', icon: <HandHeart size={20} /> },
+    { name: 'Mahubiri', path: '/sermons', icon: <BookOpen size={20} /> },
+    { name: 'Kutoa', path: '/give', icon: <Gift size={20} /> },
+    { name: 'Live', path: '/live', icon: <Radio size={20} /> },
+    { name: 'Mawasiliano', path: '/contact', icon: <MessageCircle size={20} /> },
   ];
 
   const scrolledBg = 'bg-gradient-to-r from-[#172554] to-[#1E3A8A] shadow-2xl py-3';
@@ -79,47 +89,129 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="lg:hidden text-white p-2.5 bg-white/10 rounded-xl backdrop-blur-md border border-white/10 active:scale-90 transition-transform" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        <button 
+          className="lg:hidden text-white w-11 h-11 bg-white/10 rounded-2xl backdrop-blur-md border border-white/10 active:scale-90 transition-all hover:bg-white/20 flex items-center justify-center relative" 
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <div className={`flex flex-col gap-[5px] w-5 items-center transition-all duration-300 ${isOpen ? 'rotate-45' : ''}`}>
+            <span className={`block h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'w-5 translate-y-[7px] rotate-90' : 'w-5'}`}></span>
+            <span className={`block h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'w-0 opacity-0' : 'w-3.5 ml-auto'}`}></span>
+            <span className={`block h-[2px] bg-white rounded-full transition-all duration-300 ${isOpen ? 'w-5 -translate-y-[7px]' : 'w-5'}`}></span>
+          </div>
         </button>
       </div>
 
       {/* Mobile Nav Overlay */}
-      <div className={`lg:hidden fixed inset-0 bg-gradient-to-br from-[#172554] to-black z-[60] transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-        <div className="p-8 flex flex-col h-full">
-          <div className="flex justify-between items-center mb-12">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-white p-2 rounded-2xl flex items-center justify-center shadow-2xl">
-                <img src="/images/logo.jpg" alt="TAG Logo" className="w-full h-full object-contain" />
+      <div className={`lg:hidden fixed inset-0 z-[60] transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
+        {/* Backdrop */}
+        <div 
+          className={`absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+          onClick={() => setIsOpen(false)}
+        ></div>
+
+        {/* Slide Panel */}
+        <div className={`absolute top-0 right-0 w-[88%] max-w-[380px] h-full bg-[#0a1628] transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-32 -right-32 w-64 h-64 bg-tag-red/10 rounded-full blur-[100px]"></div>
+            <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-tag-yellow/10 rounded-full blur-[100px]"></div>
+          </div>
+          
+          <div className="flex flex-col h-full relative z-10">
+            {/* Header */}
+            <div className="flex justify-between items-center p-6 pb-4 border-b border-white/5">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white p-1.5 rounded-xl flex items-center justify-center shadow-lg">
+                  <img src="/images/logo.jpg" alt="TAG Logo" className="w-full h-full object-contain rounded-md" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="font-black text-base text-white tracking-tighter leading-tight">FILADELFIA</span>
+                  <span className="text-[8px] font-black text-tag-yellow uppercase tracking-[0.25em]" style={{ color: COLORS.TAG_YELLOW }}>Christian Centre • TAG</span>
+                </div>
               </div>
-              <div className="flex flex-col">
-                <span className="font-black text-2xl text-white tracking-tighter">FILADELFIA</span>
-                <span className="text-[10px] font-black text-tag-yellow uppercase tracking-widest" style={{ color: COLORS.TAG_YELLOW }}>Christian Centre</span>
+              <button 
+                onClick={() => setIsOpen(false)} 
+                className="w-10 h-10 bg-white/5 border border-white/10 rounded-xl text-white/60 active:scale-90 transition-all hover:bg-white/10 flex items-center justify-center"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Navigation Links */}
+            <div className="flex-grow overflow-y-auto py-4 px-4">
+              <p className="text-[9px] font-black text-white/20 uppercase tracking-[0.4em] px-3 mb-3">VINJARI</p>
+              <div className="space-y-1">
+                {navLinks.map((link, idx) => {
+                  const isActive = location.pathname === link.path;
+                  return (
+                    <Link 
+                      key={link.path} 
+                      to={link.path} 
+                      onClick={() => setIsOpen(false)}
+                      className={`flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-300 group active:scale-[0.98] ${
+                        isActive 
+                          ? 'bg-white/10 border border-white/10' 
+                          : 'hover:bg-white/5'
+                      }`}
+                    >
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all ${
+                        isActive 
+                          ? 'bg-tag-yellow text-gray-900 shadow-lg shadow-tag-yellow/20' 
+                          : 'bg-white/5 text-white/40 group-hover:text-white/70 group-hover:bg-white/10'
+                      }`} style={isActive ? { backgroundColor: COLORS.TAG_YELLOW } : {}}>
+                        {link.icon}
+                      </div>
+                      <div className="flex-grow">
+                        <span className={`font-black text-[15px] uppercase tracking-wide transition-colors ${
+                          isActive ? 'text-white' : 'text-white/50 group-hover:text-white/80'
+                        }`}>{link.name}</span>
+                      </div>
+                      {isActive && (
+                        <div className="w-1.5 h-1.5 bg-tag-yellow rounded-full shadow-[0_0_8px_rgba(234,179,8,0.6)]" style={{ backgroundColor: COLORS.TAG_YELLOW }}></div>
+                      )}
+                      {!isActive && (
+                        <ChevronRight size={14} className="text-white/15 group-hover:text-white/30 transition-colors" />
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+
+              {/* CTA Button */}
+              <div className="mt-6 px-1">
+                <Link 
+                  to="/give" 
+                  onClick={() => setIsOpen(false)} 
+                  className="w-full bg-tag-yellow text-gray-900 py-4 rounded-2xl font-black text-sm text-center shadow-lg shadow-tag-yellow/10 active:scale-[0.97] transition-all flex items-center justify-center gap-2.5 uppercase tracking-wider group" 
+                  style={{ backgroundColor: COLORS.TAG_YELLOW }}
+                >
+                  <Heart size={18} className="fill-current" />
+                  TOA SADAKA
+                  <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="p-3 bg-white/10 rounded-2xl text-white active:scale-90 transition-transform"><X size={28} /></button>
-          </div>
-          <div className="flex flex-col space-y-2">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.path} 
-                to={link.path} 
-                onClick={() => setIsOpen(false)}
-                className={`text-4xl font-black transition-all py-2 ${location.pathname === link.path ? 'text-tag-yellow translate-x-4' : 'text-white/40 hover:text-white'}`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-          <div className="mt-auto pt-10 border-t border-white/5 flex flex-col items-center">
-             <Link to="/give" onClick={() => setIsOpen(false)} className="w-full bg-tag-yellow text-gray-900 py-6 rounded-[32px] font-black text-xl mb-8 text-center shadow-2xl active:scale-95 transition-transform" style={{ backgroundColor: COLORS.TAG_YELLOW }}>
-               TOA SADAKA
-             </Link>
-             <div className="flex space-x-8">
-               <a href="#" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white/60 hover:text-tag-yellow hover:bg-white/10 transition-all"><Facebook size={24} /></a>
-               <a href="#" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white/60 hover:text-tag-yellow hover:bg-white/10 transition-all"><Youtube size={24} /></a>
-               <a href="#" className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white/60 hover:text-tag-yellow hover:bg-white/10 transition-all"><Instagram size={24} /></a>
-             </div>
+
+            {/* Footer */}
+            <div className="p-6 pt-4 border-t border-white/5 space-y-5">
+              {/* Social Links */}
+              <div className="flex items-center justify-between">
+                <div className="flex gap-3">
+                  <a href="#" className="w-10 h-10 bg-white/5 border border-white/8 rounded-xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all"><Facebook size={18} /></a>
+                  <a href="#" className="w-10 h-10 bg-white/5 border border-white/8 rounded-xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all"><Youtube size={18} /></a>
+                  <a href="#" className="w-10 h-10 bg-white/5 border border-white/8 rounded-xl flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all"><Instagram size={18} /></a>
+                </div>
+                <div className="text-right">
+                  <p className="text-[9px] text-white/25 font-black uppercase tracking-[0.2em]">Goba-Tegeta(A)</p>
+                  <p className="text-[9px] text-white/40 font-bold">Dar es Salaam, TZ</p>
+                </div>
+              </div>
+
+              {/* Bottom Bar */}
+              <div className="flex items-center justify-center gap-2 pt-2">
+                <Sparkles size={10} className="text-tag-yellow/50" style={{ color: `${COLORS.TAG_YELLOW}80` }} />
+                <p className="text-[8px] text-white/20 font-black uppercase tracking-[0.3em]">Tanzania Assemblies of God</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -145,7 +237,7 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-64 h-64 bg-tag-red/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 mb-10 border-b border-white/5 pb-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10 border-b border-white/5 pb-10">
           {/* Brand Column */}
           <div className="space-y-6 text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start space-x-3">
