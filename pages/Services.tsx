@@ -206,20 +206,20 @@ const Services = () => {
                         TUMA OMBI SASA <ArrowUpRight size={24} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                       </button>
                     ) : (
-                      <div className="max-w-xl mx-auto bg-white rounded-[40px] p-8 md:p-12 text-left animate-fadeIn">
+                      <div className="max-w-xl mx-auto bg-white rounded-[40px] p-8 md:p-12 text-left relative z-20 shadow-2xl border border-white block">
                         {isSubmitted ? (
                           <div className="text-center py-10">
                             <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                               <CheckCircle2 size={40} />
                             </div>
                             <h3 className="text-2xl font-black text-gray-900 mb-2">Ombi Limepokelewa!</h3>
-                            <p className="text-gray-500 font-medium">Asante kwa nia yako ya kutumika. Uongozi wa idara utakuvuta hivi karibuni.</p>
+                            <p className="text-gray-600 font-medium">Asante kwa nia yako ya kutumika. Uongozi wa idara utakuvuta hivi karibuni.</p>
                           </div>
                         ) : (
                           <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 gap-6">
                               <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Jina Kamili</label>
+                                <label className="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2 ml-4">Jina Kamili</label>
                                 <div className="relative">
                                   <User className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                                   <input 
@@ -233,7 +233,7 @@ const Services = () => {
                                 </div>
                               </div>
                               <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Namba ya Simu</label>
+                                <label className="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2 ml-4">Namba ya Simu</label>
                                 <div className="relative">
                                   <Phone className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                                   <input 
@@ -247,7 +247,7 @@ const Services = () => {
                                 </div>
                               </div>
                               <div>
-                                <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2 ml-4">Ujumbe Mfupi (Hiari)</label>
+                                <label className="block text-[10px] font-black text-gray-500 uppercase tracking-widest mb-2 ml-4">Ujumbe Mfupi (Hiari)</label>
                                 <textarea 
                                   className="w-full bg-gray-50 border-2 border-gray-100 rounded-2xl py-4 px-6 text-gray-900 font-bold focus:border-tag-red outline-none transition-all min-h-[120px]"
                                   placeholder="Eleza kwanini ungependa kujiunga..."
@@ -259,14 +259,14 @@ const Services = () => {
                             <div className="flex flex-col sm:flex-row gap-4 pt-2">
                               <button 
                                 type="submit"
-                                className="flex-grow bg-tag-red text-white py-5 rounded-2xl font-black flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transition-all"
+                                className="flex-grow bg-tag-red text-white py-5 rounded-2xl font-black flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transition-all active:scale-95"
                                 style={{ backgroundColor: COLORS.TAG_RED }}
                               >
                                 WASILISHA OMBI <Send size={20} />
                               </button>
                               <button 
                                 type="button"
-                                onClick={() => setShowForm(false)}
+                                onClick={(e) => { e.stopPropagation(); setShowForm(false); }}
                                 className="px-8 py-5 bg-gray-100 text-gray-500 rounded-2xl font-black hover:bg-gray-200 transition-all"
                               >
                                 GHAIRI
