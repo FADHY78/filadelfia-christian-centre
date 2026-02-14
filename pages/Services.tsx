@@ -136,9 +136,9 @@ const Services = () => {
                        <div className="absolute inset-0 gradient-mesh opacity-10"></div>
                        <Quote className="absolute -top-4 -right-4 w-32 h-32 text-white/5 opacity-20" />
                        <p className="text-lg md:text-2xl italic font-bold leading-relaxed relative z-10">
-                         "Kwa maana sisi tu kazi yake, tuliumbwa katika Kristo Yesu, tutende matendo mema, ambayo tokea awali Mungu aliyatengeneza ili tuenende nayo."
+                         "{selectedMinistry.scripture.text}"
                        </p>
-                       <p className="text-tag-yellow font-black text-xs md:text-sm uppercase tracking-[0.4em] mt-8 relative z-10" style={{ color: COLORS.TAG_YELLOW }}>— Efeso 2:10</p>
+                       <p className="text-tag-yellow font-black text-xs md:text-sm uppercase tracking-[0.4em] mt-8 relative z-10" style={{ color: COLORS.TAG_YELLOW }}>— {selectedMinistry.scripture.reference}</p>
                     </div>
                  </div>
                  

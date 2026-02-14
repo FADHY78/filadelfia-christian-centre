@@ -149,10 +149,29 @@ const Home = () => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {[1, 2, 3].map((i) => (
+            {[
+              {
+                title: 'Mchungaji Ni nguzo Kuu ya Kanisa',
+                preacher: 'Mzee John Mchosa',
+                date: 'Dec 03, 2025',
+                image: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?w=640&h=360&fit=crop'
+              },
+              {
+                title: 'Wajibu wa mkristo katika siku za mwisho',
+                preacher: 'Ev: Jeremia Isayah',
+                date: 'Nov 9, 2025',
+                image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=640&h=360&fit=crop'
+              },
+              {
+                title: 'Mungu anapotutembelea tena',
+                preacher: 'Pastor Stanley Mndasha',
+                date: 'Oct 10, 2025',
+                image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=640&h=360&fit=crop'
+              }
+            ].map((sermon, i) => (
               <div key={i} className="bg-white rounded-[24px] md:rounded-[32px] overflow-hidden shadow-lg hover:shadow-2xl transition-all group border border-gray-100">
                 <div className="relative aspect-video overflow-hidden">
-                  <img src={`https://picsum.photos/seed/sermon${i}/600/400`} alt="Sermon" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={sermon.image} alt={sermon.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-tag-red shadow-2xl transform scale-50 group-hover:scale-100 transition-transform duration-500">
                        <PlayCircle size={24} />
@@ -160,10 +179,10 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="p-6 md:p-8">
-                  <h3 className="text-lg md:text-xl font-black text-gray-900 mb-4 group-hover:text-tag-red line-clamp-2 transition-colors">Nguvu ya Maombi katika Majaribu ya Maisha</h3>
+                  <h3 className="text-lg md:text-xl font-black text-gray-900 mb-4 group-hover:text-tag-red line-clamp-2 transition-colors">{sermon.title}</h3>
                   <div className="flex items-center justify-between text-[9px] text-gray-400 pt-5 border-t border-gray-100 uppercase tracking-widest font-black">
-                    <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-tag-red rounded-full"></div> Pastor Neema Mndasha</span>
-                    <span>Oct 24, 2023</span>
+                    <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-tag-red rounded-full"></div> {sermon.preacher}</span>
+                    <span>{sermon.date}</span>
                   </div>
                 </div>
               </div>

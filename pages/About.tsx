@@ -31,18 +31,18 @@ const About = () => {
           <span className="text-tag-red font-black text-xs tracking-[0.3em] uppercase mb-4 block" style={{ color: COLORS.TAG_RED }}>HISTORIA YETU</span>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8 leading-tight tracking-tighter">Safari ya Imani Goba-Tegeta(A)</h2>
           <p className="text-base md:text-lg text-gray-600 mb-6 leading-relaxed font-medium">
-            Filadelfia Christian Centre ilianza kama kundi dogo la maombi. Kwa neema ya Mungu, kanisa limekua na kuwa kitovu cha mabadiliko ya kiroho na kijamii katika eneo letu la Goba-Tegeta(A).
+            Kwa neema ya Mungu, kanisa limekua na kuwa kitovu cha mabadiliko ya kiroho na kijamii katika eneo letu la Goba-Tegeta(A), tukileta nuru ya injili kwa jamii yetu.
           </p>
           <p className="text-base md:text-xl text-gray-600 mb-10 leading-relaxed font-medium">
             Kama sehemu ya TAG, tunaendeleza maono ya uamsho na uinjilisti, tukihakikisha kila kona ya jamii yetu inaguswa na upendo wa Kristo chini ya uongozi mahiri wa mchungaji wetu.
           </p>
           <div className="grid grid-cols-2 gap-8 border-t border-gray-200 pt-10">
             <div>
-              <h4 className="text-4xl md:text-5xl font-black text-tag-red mb-2" style={{ color: COLORS.TAG_RED }}>25+</h4>
+              <h4 className="text-4xl md:text-5xl font-black text-tag-red mb-2" style={{ color: COLORS.TAG_RED }}>5+</h4>
               <p className="font-black text-gray-500 uppercase text-[10px] tracking-[0.2em]">Miaka ya Huduma</p>
             </div>
             <div>
-              <h4 className="text-4xl md:text-5xl font-black text-tag-yellow mb-2" style={{ color: COLORS.TAG_YELLOW }}>1,500+</h4>
+              <h4 className="text-4xl md:text-5xl font-black text-tag-yellow mb-2" style={{ color: COLORS.TAG_YELLOW }}>200+</h4>
               <p className="font-black text-gray-500 uppercase text-[10px] tracking-[0.2em]">Wanachama Hai</p>
             </div>
           </div>

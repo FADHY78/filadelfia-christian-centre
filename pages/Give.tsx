@@ -65,8 +65,8 @@ const Give = () => {
       icon: <Construction />, 
       title: "Upanuzi wa Kanisa", 
       status: "Ujenzi wa Msingi", 
-      target: "Waumini 2,000+",
-      update: "Kuta zinaanza kupandishwa",
+      target: "Waumini Wengi",
+      update: "Mipango ya ujenzi inaendelea",
       description: "Ujenzi wa jengo jipya la kisasa la ibada na ofisi za uongozi kutosheleza idadi ya waumini inayokua."
     },
     { 
@@ -74,16 +74,16 @@ const Give = () => {
       title: "Mitambo ya Media", 
       status: "Ununuzi wa Vifaa", 
       target: "Watazamaji Live",
-      update: "Kamera 2 tayari zimenunuliwa", 
+      update: "Ununuzi wa vifaa unaendelea", 
       description: "Ufungaji wa mitambo ya kisasa ya kurusha ibada mubashara (Live Stream) na mifumo ya sauti ya hali ya juu."
     },
     { 
       icon: <HandHeart />, 
-      title: "Mfuko wa Elimu", 
-      status: "Ugawaji wa Msaada", 
-      target: "Watoto 50+", 
-      update: "Ada za muhula wa kwanza zimelipwa",
-      description: "Kusaidia watoto wanaotoka katika mazingira magumu kupata mahitaji muhimu ya shule na ada za masomo."
+      title: "Huduma za Jamii", 
+      status: "Msaada Unaendelea", 
+      target: "Familia Nyingi", 
+      update: "Huduma mbalimbali zinaendelezwa",
+      description: "Kutoa msaada na huduma muhimu kwa wanaohitaji katika jamii yetu kupitia programu mbalimbali za kiroho na kijamii."
     },
   ];
 
@@ -328,7 +328,7 @@ const Give = () => {
                     <div className="pt-4 border-t border-gray-100">
                       <p className="text-[10px] text-gray-400 font-black uppercase tracking-widest mb-2 flex items-center gap-2">
                         <Zap size={10} className="text-tag-red" style={{ color: COLORS.TAG_RED }} />
-                        Taarifa ya Sasa
+                        Maendeleo
                       </p>
                       <p className="text-sm font-black text-gray-900 leading-tight">
                         {project.update}
