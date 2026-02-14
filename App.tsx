@@ -281,11 +281,15 @@ const Footer = () => {
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
                 <Phone size={16} className="text-tag-red shrink-0" style={{ color: COLORS.TAG_RED }} />
-                <span>+255 700 000 000</span>
+                <div className="flex flex-col gap-1">
+                  <span>+255 784 536 416</span>
+                  <span>+255 785 484 812</span>
+                  <span>+255 675 347 474</span>
+                </div>
               </li>
               <li className="flex flex-col sm:flex-row items-center sm:items-start gap-3 justify-center sm:justify-start">
                 <Mail size={16} className="text-tag-red shrink-0" style={{ color: COLORS.TAG_RED }} />
-                <span className="break-all">info@fcc.or.tz</span>
+                <span className="break-all">tagfiladelfia@gmail.com</span>
               </li>
             </ul>
           </div>

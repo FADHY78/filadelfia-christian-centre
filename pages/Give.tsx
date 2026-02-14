@@ -264,7 +264,11 @@ const Give = () => {
                     <Send size={32} className="text-purple-600 mb-6 relative z-10" />
                     <h4 className="font-black text-gray-900 text-xl mb-2 relative z-10">Sendwave / WorldRemit</h4>
                     <p className="text-sm text-gray-500 font-medium mb-4 relative z-10">Njia rahisi kwa walio Diaspora kutuma sadaka moja kwa moja.</p>
-                    <p className="text-xs font-black text-tag-red uppercase tracking-wider" style={{ color: COLORS.TAG_RED }}>+255 758 123 456</p>
+                    <div className="space-y-1">
+                      <p className="text-xs font-black text-tag-red uppercase tracking-wider" style={{ color: COLORS.TAG_RED }}>+255 784 536 416</p>
+                      <p className="text-xs font-black text-tag-red uppercase tracking-wider" style={{ color: COLORS.TAG_RED }}>+255 785 484 812</p>
+                      <p className="text-xs font-black text-tag-red uppercase tracking-wider" style={{ color: COLORS.TAG_RED }}>+255 675 347 474</p>
+                    </div>
                   </div>
 
                   <div className="bg-white/90 backdrop-blur-sm p-8 rounded-[35px] shadow-lg hover:shadow-2xl transition-all duration-300 group overflow-hidden relative">
@@ -272,7 +276,7 @@ const Give = () => {
                     <Globe size={32} className="text-indigo-600 mb-6 relative z-10" />
                     <h4 className="font-black text-gray-900 text-xl mb-2 relative z-10">PayPal & Wise</h4>
                     <p className="text-sm text-gray-500 font-medium mb-4 relative z-10">Huduma za malipo ya kidijitali za kimataifa kwa usalama.</p>
-                    <p className="text-[11px] font-black text-gray-800 bg-gray-50 p-2 rounded-xl truncate">info@filadelfiachurch.org</p>
+                    <p className="text-[11px] font-black text-gray-800 bg-gray-50 p-2 rounded-xl truncate">tagfiladelfia@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -453,18 +457,19 @@ const Give = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
               <div>
                 <h4 className="font-black mb-3">Mawasiliano</h4>
-                <p className="opacity-80">+255 758 123 456</p>
-                <p className="opacity-80">info@filadelfiachurch.org</p>
+                <p className="opacity-80">+255 675 347 474</p>
+                <p className="opacity-80">tagfiladelfia@gmail.com</p>
               </div>
               <div>
                 <h4 className="font-black mb-3">Mahali</h4>
                 <p className="opacity-80">Goba-Tegeta(A)</p>
                 <p className="opacity-80">Dar es Salaam, Tanzania</p>
+                <p className="opacity-80">+255 675 347 474</p>
               </div>
               <div>
                 <h4 className="font-black mb-3">Msaada</h4>
                 <p className="opacity-80">Jumapili 06:00 - 13:00</p>
-                <p className="opacity-80">support@filadelfiachurch.org</p>
+                <p className="opacity-80">tagfiladelfia@gmail.com</p>
               </div>
             </div>
           </div>

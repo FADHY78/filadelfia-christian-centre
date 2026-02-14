@@ -49,8 +49,7 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Miaka 3 - 12',
     memberCount: '250+ Watoto',
     leaders: [
-      { name: 'Mama Sarah M.', role: 'Mkurugenzi wa Watoto' },
-      { name: 'Mwl. Peter John', role: 'Mratibu wa Mafundisho' }
+      { name: 'Odeta Kalindile', role: 'Mkurugenzi wa Watoto' }
     ],
     activities: ['Mafundisho ya Biblia', 'Mazoezi ya Kwaya ya Watoto', 'Michezo ya Kikristo', 'Safari za Mafunzo (Field Trips)', 'Mashindano ya Kukariri Aya']
   },
@@ -64,8 +63,7 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Miaka 13 - 35',
     memberCount: '400+ Vijana',
     leaders: [
-      { name: 'Bro. Emmanuel K.', role: 'Mwenyekiti wa Vijana' },
-      { name: 'Sis. Neema S.', role: 'Katibu' }
+      { name: 'Jaston Dogoda', role: 'Mwenyekiti wa Vijana' }
     ],
     activities: ['Semina za Kujitambua', 'Majadiliano ya Wazi (Talk Shows)', 'Michezo na Burudani', 'Maombi na Kufunga kwa Vijana', 'Ujasiriamali']
   },
@@ -79,8 +77,7 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Akina Mama wote',
     memberCount: '300+ Akina Mama',
     leaders: [
-      { name: 'Mama Grace L.', role: 'Mwenyekiti WWK' },
-      { name: 'Mama Anna P.', role: 'Mratibu wa Maombi' }
+      { name: 'Margeth Senzige', role: 'Mwenyekiti WWK' }
     ],
     activities: ['Maombi ya WWK', 'Mafunzo ya Ujasiriamali', 'Huduma kwa Wajane na Mayatima', 'Semina za Ndoa na Malezi', 'Kujitegemea']
   },
@@ -94,8 +91,7 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Akina Baba wote',
     memberCount: '200+ Akina Baba',
     leaders: [
-      { name: 'Mzee Peter S.', role: 'Mwenyekiti CPD' },
-      { name: 'Bro. David R.', role: 'Mratibu wa Miradi' }
+      { name: 'Michel Mhagama', role: 'Mwenyekiti CPD' }
     ],
     activities: ['Kifungua kinywa cha Wanaume', 'Mafunzo ya Uongozi wa Familia', 'Michezo (Football & Jogging)', 'Huduma ya Utumishi', 'Uwekezaji']
   },
@@ -109,8 +105,7 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Wenye karama ya muziki',
     memberCount: '50+ Waimbaji',
     leaders: [
-      { name: 'Bro. Silas M.', role: 'Mwalimu wa Sifa' },
-      { name: 'Sis. Martha K.', role: 'Mratibu wa Ibada' }
+      { name: 'Jeremia Isaya', role: 'Mkurugenzi' }
     ],
     activities: ['Mazoezi ya Sauti', 'Mafunzo ya Ala (Piano/Guitars)', 'Kesha la Sifa', 'Kurekodi Nyimbo', 'Semina za Ibada']
   },
@@ -124,10 +119,23 @@ export const MINISTRIES: MinistryDetail[] = [
     ages: 'Wote wenye shauku ya roho',
     memberCount: '100+ Wainjilisti',
     leaders: [
-      { name: 'Mwinj. Joshua B.', role: 'Mkuu wa Idara' },
-      { name: 'Ev. Mary C.', role: 'Mratibu wa Misheni' }
+      { name: 'Safina Daniel', role: 'Mkuu wa Idara' }
     ],
     activities: ['Mikutano ya Hadhara', 'Uinjilisti wa Mashuleni', 'Kupanda Makanisa Mapya', 'Huduma za Magerezani', 'Usambazaji wa Trakti']
+  },
+  { 
+    id: 'discipleship', 
+    name: 'Uanafunzi na Maandiko', 
+    icon: <Users className="w-6 h-6" />, 
+    desc: 'Kujenga imani imara na kukua kiroho kupitia mafundisho ya kina.',
+    longDesc: 'Huduma ya Uanafunzi na Maandiko inalenga kujenga waumini wenye msingi thabiti wa neno la Mungu. Tunatoa mafundisho ya kina ya Biblia, maendeleo ya kibinafsi, na uongozaji wa kiroho ili kuwasaidia waumini kukua na kuwa wanafunzi wa kweli wa Kristo wanaofanana na mfano wake.',
+    schedule: 'Jumatano: Saa 04:00 Asubuhi',
+    ages: 'Waumini wote',
+    memberCount: '150+ Wanafunzi',
+    leaders: [
+      { name: 'John Mchosa', role: 'Mkuu wa Idara' }
+    ],
+    activities: ['Mafundisho ya Biblia', 'Ushauri wa Kibinafsi', 'Vikundi vya Kujifunza', 'Maendeleo ya Uongozi', 'Maombi ya Makundi']
   },
 ];
 

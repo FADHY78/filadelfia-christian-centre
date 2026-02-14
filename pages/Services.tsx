@@ -160,23 +160,15 @@ const Services = () => {
               <div className="mb-24 md:mb-40">
                  <div className="text-center mb-16">
                     <span className="text-tag-red font-black text-[10px] md:text-xs tracking-[0.4em] uppercase block mb-4" style={{ color: COLORS.TAG_RED }}>UONGOZI WA IDARA</span>
-                    <h2 className="text-3xl md:text-6xl font-black text-gray-900 tracking-tighter leading-none">Viongozi Wanaotuongoza</h2>
+                    <h2 className="text-3xl md:text-6xl font-black text-gray-900 tracking-tighter leading-none">Kiongozi Anayetuongoza</h2>
                  </div>
                  
-                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                 <div className="max-w-2xl mx-auto">
                     {selectedMinistry.leaders.map((leader, i) => (
-                      <div key={i} className="group relative bg-white p-4 rounded-[48px] border border-gray-100 shadow-xl hover:shadow-3xl transition-all duration-500 text-center">
-                         <div className="relative aspect-square rounded-[40px] overflow-hidden mb-6 shadow-2xl bg-gray-50">
-                            <img 
-                              src={`https://picsum.photos/seed/${leader.name.replace(/\s/g, '')}/500/500`} 
-                              className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" 
-                              alt={leader.name} 
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-tag-red/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                         </div>
+                      <div key={i} className="group relative bg-white p-8 md:p-12 rounded-[48px] border border-gray-100 shadow-xl hover:shadow-3xl transition-all duration-500 text-center">
                          <div className="pb-4">
-                            <h4 className="text-xl font-black text-gray-900 mb-1 group-hover:text-tag-red transition-colors">{leader.name}</h4>
-                            <p className="text-[10px] text-gray-400 font-black uppercase tracking-[0.2em]">{leader.role}</p>
+                            <h4 className="text-2xl md:text-4xl font-black text-gray-900 mb-3 group-hover:text-tag-red transition-colors">{leader.name}</h4>
+                            <p className="text-xs md:text-sm text-gray-400 font-black uppercase tracking-[0.2em]">{leader.role}</p>
                          </div>
                       </div>
                     ))}
